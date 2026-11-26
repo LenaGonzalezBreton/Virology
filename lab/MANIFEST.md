@@ -7,13 +7,19 @@ Le sujet Epitech *Virology* v1.3 demande de démontrer un outil sur une VM Windo
 | Élément | Choix | État |
 | --- | --- | --- |
 | Hyperviseur | Oracle VirtualBox | Version installée `7.2.22.175245`, relevée sur l’hôte. |
-| Machine cible | Une VM jetable Windows 11 Professionnel x64, nom proposé `Virology-Windows` | Choix proposé. Édition, version et build à relever **dans la VM**. L’inventaire des VM n’a pas pu être confirmé. |
-| Snapshot de départ | `virology-reference` | Nom proposé. Date et état de référence à relever au moment de la création. |
-| Antivirus de référence | Microsoft Defender Antivirus, protection active dans la VM | État et versions du moteur et des signatures à relever avant l’essai. |
+| Machine cible | `virology-clean`, 4 processeurs virtuels et 4 Gio de RAM | `winver` confirme Windows 11 Entreprise (évaluation) 64 bits, version 26H2, build `26300.9457`. Bureau Windows affiché en configuration hors ligne. |
+| Snapshot de départ | `virology-reference` | Créé le 26 novembre 2026 à 15 h 44 min 45 s, heure de Paris. VirtualBox le désigne comme snapshot courant. La VM était arrêtée proprement. |
+| Antivirus de référence | Microsoft Defender Antivirus | Protection en temps réel active. Signatures `1.437.1.0`, datées du 17 septembre 2025. Dernière mise à jour affichée comme indisponible. Version du moteur à relever avant l’essai. |
 | Journaux à consulter | Journaux Windows Système et Sécurité, historique des alertes Defender | Sources proposées. Disponibilité et plage temporelle à vérifier dans la VM. |
 | Capture réseau | Wireshark, cité dans le sujet | Outil retenu pour documenter le trafic. Installation et version à confirmer. |
 
 La VM est l’environnement commun aux deux rôles. La **Red Team** joue le rôle de l’opérateur et décrit le comportement attendu. La **Blue Team** joue le rôle du défenseur et décrit les événements qu’elle peut observer. Utiliser des comptes et des données de démonstration fictifs dans l’environnement dédié.
+
+### Relevé initial dans Windows
+
+- Relevés effectués dans `winver` et **Sécurité Windows** avant l’arrêt de la VM et la prise du snapshot.
+- Les gels VirtualBox en mode NEM ont nécessité un contournement temporaire pendant la configuration et le relevé. La stabilité du prochain démarrage reste à vérifier.
+- L’accès aux journaux de référence et la disponibilité de Wireshark restent à vérifier avant les essais.
 
 ## Critères du sujet et preuves attendues
 
