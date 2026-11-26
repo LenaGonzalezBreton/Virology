@@ -10,16 +10,15 @@ Le sujet Epitech *Virology* v1.3 demande de démontrer un outil sur une VM Windo
 | Machine cible | `virology-clean`, 4 processeurs virtuels et 4 Gio de RAM | `winver` confirme Windows 11 Entreprise (évaluation) 64 bits, version 26H2, build `26300.9457`. Bureau Windows affiché en configuration hors ligne. |
 | Snapshot de départ | `virology-reference` | Créé le 26 novembre 2026 à 15 h 44 min 45 s, heure de Paris. VirtualBox le désigne comme snapshot courant. La VM était arrêtée proprement. |
 | Antivirus de référence | Microsoft Defender Antivirus | Protection en temps réel active. Signatures `1.437.1.0`, datées du 17 septembre 2025. Dernière mise à jour affichée comme indisponible. Version du moteur à relever avant l’essai. |
-| Journaux à consulter | Journaux Windows Système et Sécurité, historique des alertes Defender | Sources proposées. Disponibilité et plage temporelle à vérifier dans la VM. |
-| Capture réseau | Wireshark, cité dans le sujet | Outil retenu pour documenter le trafic. Installation et version à confirmer. |
+| Journaux à consulter | Journaux Windows Système et Sécurité, historique de protection de Microsoft Defender | Le 26 novembre 2026, Système et Sécurité ont été ouverts dans l’Observateur d’événements. Dans Sécurité Windows, l’historique de protection affichait « Aucune action récente ». |
+| Capture réseau | Wireshark `4.6.10` installé sur l’hôte | Le 26 novembre 2026, lecture d’un fichier `.pcapng` contenant une requête DNS fictive pour `example.invalid` vérifiée dans Wireshark. Le pilote Npcap est absent. La capture en direct reste à valider. |
 
 La VM est l’environnement commun aux deux rôles. La **Red Team** joue le rôle de l’opérateur et décrit le comportement attendu. La **Blue Team** joue le rôle du défenseur et décrit les événements qu’elle peut observer. Utiliser des comptes et des données de démonstration fictifs dans l’environnement dédié.
 
 ### Relevé initial dans Windows
 
 - Relevés effectués dans `winver` et **Sécurité Windows** avant l’arrêt de la VM et la prise du snapshot.
-- Les gels VirtualBox en mode NEM ont nécessité un contournement temporaire pendant la configuration et le relevé. La stabilité du prochain démarrage reste à vérifier.
-- L’accès aux journaux de référence et la disponibilité de Wireshark restent à vérifier avant les essais.
+- Les gels VirtualBox en mode NEM ont nécessité un contournement temporaire pendant la configuration et le relevé. Le 26 novembre 2026, le démarrage normal a atteint le bureau et l’Observateur d’événements a chargé les journaux Système et Sécurité sans ce contournement. Certaines commandes ont répondu avec un délai.
 
 ## Critères du sujet et preuves attendues
 
